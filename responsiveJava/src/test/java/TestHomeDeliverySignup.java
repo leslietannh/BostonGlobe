@@ -54,20 +54,26 @@ public class TestHomeDeliverySignup {
 		//capabilities.setCapability("openDeviceTimeout", 5);
 
 		switch (targetEnvironment) {
-		case "Galaxy S8":
+		case "Galaxy-S6":
 			device = true;
-			fast = false;
 			capabilities.setCapability("platformName", "Android");
-			capabilities.setCapability("deviceName", "9887BC443241585150");
-			capabilities.setCapability("browserName", "mobileChrome");
+			capabilities.setCapability("platformVersion", "6.0.1");
+			capabilities.setCapability("manufacturer", "Samsung");
+			capabilities.setCapability("model", "Galaxy S6");
+			capabilities.setCapability("location", "NA-US-BOS");
+			capabilities.setCapability("resolution", "1440x2660");
+			capabilities.setCapability("deviceId", "0815F88C2CA51F05");
 			break;
 
-		case "iPhone 7":
+		case "iPhone8":
 			device = true;
-			fast = false;
 			capabilities.setCapability("platformName", "iOS");
-			capabilities.setCapability("deviceName", "889F8D634819743C852A88983BF12C7FA74B3194");
-			capabilities.setCapability("browserName", "mobileSafari");
+			capabilities.setCapability("platformVersion", "12.1");
+			capabilities.setCapability("manufacturer", "Apple");
+			capabilities.setCapability("model", "iPhone-8");
+			capabilities.setCapability("location", "NA-US-BOS");
+			capabilities.setCapability("resolution", "750x1334");
+			capabilities.setCapability("deviceId", "311C990DA91C9CB4A36D2D6A5F296D5019D28678");
 			break;
 		
 		case "Chrome Latest":
@@ -225,10 +231,11 @@ public class TestHomeDeliverySignup {
 			
 		}
 
-		capabilities.setCapability("user", System.getProperty("PerfectoUsername"));
-		capabilities.setCapability("password", System.getProperty("PerfectoPassword"));		
-		if(fast) { capabilities.setCapability("securityToken", System.getProperty("PerfectoToken"));}
-		capabilities.setCapability("securityToken", "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJzbFV4OFFBdjdVellIajd4YWstR0tTbE43UjFNSllDbC1TRVJiTlU1RFlFIn0.eyJqdGkiOiJlZTM4ZjgyNi1lOTRiLTRjM2MtYWU5NC1mOWU2ZTJiMmExYjIiLCJleHAiOjAsIm5iZiI6MCwiaWF0IjoxNTM0OTUyMDM5LCJpc3MiOiJodHRwczovL2F1dGgucGVyZmVjdG9tb2JpbGUuY29tL2F1dGgvcmVhbG1zL2RlbW8tcGVyZmVjdG9tb2JpbGUtY29tIiwiYXVkIjoib2ZmbGluZS10b2tlbi1nZW5lcmF0b3IiLCJzdWIiOiI5MWRhODRjNC04NTY5LTRmNmItYjVhMi01MTM2YWJhZWFjMDgiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoib2ZmbGluZS10b2tlbi1nZW5lcmF0b3IiLCJub25jZSI6IjBlZjk3MzJmLTU2ODMtNDQ0Zi04NDBiLWYwMjRmNDBmZDY0MCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjU1ZGFmNTIxLTZlMzAtNGM0My1hYzI5LWRjMGQ1NTIxYzczMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fX0.XgRJw6r2X1KzteEIekH4ikv_2tQbASFY0VF8cFYlFXufix1qLjTfZegaS6KGDSjyvTBmy2W85QGPveuRCh6391VPP1KVVPl0IfAnSoVR3b7itsjborIyEF4uL1o_sB3S4bZEVDZOGJqYHCguPuOWpf_RGSYFUw1RAE_ncXwzxCkASUEuF5t3KZhu5wARU2U-_xnWsLwKN11cxxfVGhKoYCF7_uFKDYEYVJzNbMTMqRYKqlEwSQhH4k-9jYWme-SWHBAY2yp3vN-vQkAlP9Se0OjkOSd53_BxSAM179llddgkneF-C31lvfS5_SP-Ml0t9RBGCke8ENNGu6HrhFD8oQ");
+		// capabilities.setCapability("user", System.getProperty("PerfectoUsername"));
+		// capabilities.setCapability("password", System.getProperty("PerfectoPassword"));		
+		// Note: Using the system.env this is pulling the token from a local environment variable on the executing system
+		capabilities.setCapability("securityToken","eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJzbFV4OFFBdjdVellIajd4YWstR0tTbE43UjFNSllDbC1TRVJiTlU1RFlFIn0.eyJqdGkiOiJhZjI1MjQyOC0xZmEyLTRiOTMtOWM2Yi0yZmY1YWZlMDRjM2UiLCJleHAiOjAsIm5iZiI6MCwiaWF0IjoxNTU3OTQ4MDY3LCJpc3MiOiJodHRwczovL2F1dGgucGVyZmVjdG9tb2JpbGUuY29tL2F1dGgvcmVhbG1zL2RlbW8tcGVyZmVjdG9tb2JpbGUtY29tIiwiYXVkIjoib2ZmbGluZS10b2tlbi1nZW5lcmF0b3IiLCJzdWIiOiIzZDY3MGZhNC1hNzk5LTRhY2MtOGZjYy05MzUwYzIyNTRjY2IiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoib2ZmbGluZS10b2tlbi1nZW5lcmF0b3IiLCJub25jZSI6IjNmZmYyMmQyLWNlYzEtNDE0OS04OTM1LTU5NDEzZDhlNzU3OCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjgyZmNiMzdlLWVlNDMtNGY5ZS04OTNkLTdmYWJlNjQzN2JhYyIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fX0.NIMALo3WtUYVsqQVrAqLr86sAKtQ4cQP1f7Wl8Idn1BOx-nq_i12lmmLEC3rLl_VJABo1NL4Qh9Tps84MlNuCMHz8TQ2fVDLTJ9r1NeUFuu_4rvxWd3nmUFEu1lS7wsw6d37GybK_b0wOKBY37myKFS11I52S3ISkf04vZi8B8itdJtMb1h-b7Gcu9Tfep-cIvArHKsPHoAjTyKE18l8lSgTI2sqIWmKz9C_FM9KJxv4upkonUvSfjgt-T2c9LiRyMnX58eonUFDdfMFzxlWzI-R52jT5Rtm6rDxYAjH96XeeTctrmghXHFNEbB_M-WIMQvJY4j-p5JkbNG28pKHLg");   
+		//System.out.println("Perfecto Token " + System.getenv("token"));
 		
 		capabilities.setCapability("newCommandTimeout", "30");
 		if (device) { capabilities.setCapability("windTunnelPersona", "Georgia"); }
@@ -249,7 +256,6 @@ public class TestHomeDeliverySignup {
 			try {
 				System.out.println("Trying to aquire session: " + targetEnvironment);
 				if(fast) {
-					
 					driver = new RemoteWebDriver(new URL("https://demo.perfectomobile.com/nexperience/perfectomobile/wd/hub/fast"),
 						capabilities);
 					System.out.println(targetEnvironment + ": " + (System.nanoTime() - startTime) / 1000000);
@@ -341,7 +347,7 @@ public class TestHomeDeliverySignup {
 		
 		//System.out.println("### Entering zipcode ###");
 		driver.findElement(By.xpath("//input[@name='txtZip']")).clear();
-		driver.findElement(By.xpath("//input[@name='txtZip']")).sendKeys("01801");
+		driver.findElement(By.xpath("//input[@name='txtZip']")).sendKeys("02110");
 		//driver.findElement(By.xpath("//input[@name='txtZip']")).sendKeys("secured.eW1U4AHF/7fA0km7X2ty2w==");
 		
 		
@@ -372,14 +378,14 @@ public class TestHomeDeliverySignup {
 		sleep(1000);
 		//System.out.println("### Entering subscription details ###");
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='txtDeliveryFirstName']")));
-		driver.findElement(By.xpath("//input[@id='txtDeliveryFirstName']")).sendKeys("Leslie");
-		driver.findElement(By.xpath("//input[@id='txtDeliveryLastName']")).sendKeys("Tan");
-		driver.findElement(By.xpath("//input[@id='txtDeliveryAddress1']")).sendKeys("101 Main St");
-		driver.findElement(By.xpath("//input[@id='txtDeliveryAddress2']")).sendKeys("Apt. 2");
-		driver.findElement(By.xpath("//input[@id='txtDeliveryAreaCode']")).sendKeys("781");
-		driver.findElement(By.xpath("//input[@id='txtDeliveryPhone3']")).sendKeys("555");
-		driver.findElement(By.xpath("//input[@id='txtDeliveryPhone4']")).sendKeys("1234");
-		driver.findElement(By.xpath("//input[@id='txtDeliveryEMail']")).sendKeys("patrickm@perfectomobile.com");
+		driver.findElement(By.id("first-name")).sendKeys("Pat");
+		driver.findElement(By.xpath("//input[@id='last-name']")).sendKeys("McCartney");
+		driver.findElement(By.xpath("//input[@id='address1']")).sendKeys("28 Main St");
+		driver.findElement(By.xpath("//input[@id='address2']")).sendKeys("Apt. 2");
+		driver.findElement(By.xpath("//input[@id='area-code']")).sendKeys("781");
+		driver.findElement(By.xpath("//input[@id='phone3']")).sendKeys("847");
+		driver.findElement(By.xpath("//input[@id='phone4']")).sendKeys("4433");
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("patrickm@perfectomobile.com");
 		takeScreenshot();
 		
 		
