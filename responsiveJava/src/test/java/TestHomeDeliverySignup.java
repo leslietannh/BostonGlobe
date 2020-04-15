@@ -54,7 +54,7 @@ public class TestHomeDeliverySignup {
 		//capabilities.setCapability("openDeviceTimeout", 5);
 
 		switch (targetEnvironment) {
-		case "iPhone11":
+				case "iPhone11":
 			capabilities.setCapability("platformName", "iOS");
 			capabilities.setCapability("platformVersion", "13.0");
 			capabilities.setCapability("location", "NA-US-BOS");
@@ -63,29 +63,18 @@ public class TestHomeDeliverySignup {
 			capabilities.setCapability("model", "iPhone-11");
 			capabilities.setCapability("deviceId", "00008030-001258DE2E10802E");
 		break;
-				
-			case "Smasung Galaxy S9+":
+		
+			case "Smasung Galaxy Note10":
 			capabilities.setCapability("platformName", "Android");
 			capabilities.setCapability("platformVersion", "9");
 			capabilities.setCapability("location", "NA-US-BOS");
-			capabilities.setCapability("resolution", "1440x2960");
+			capabilities.setCapability("resolution", "1080x2280");
 			capabilities.setCapability("manufacturer", "Samsung");
-			capabilities.setCapability("model", "Galaxy Note 9");
-			capabilities.setCapability("deviceId", "272911852E217ECE");
+			capabilities.setCapability("model", "Galaxy Note10");
+			capabilities.setCapability("deviceId", "R58M77SEH3E");
 		break;
 		
-		case "Chrome Latest":
-			device = false;
-			fast = true;
-			capabilities.setCapability("platformName", "Windows");
-			capabilities.setCapability("platformVersion", "10");
-			capabilities.setCapability("browserName", "Chrome");
-			capabilities.setCapability("browserVersion", "81");
-			capabilities.setCapability("resolution", "1280x1024");
-			capabilities.setCapability("location", "US East");
-			break;
-			
-		case "Chrome Latest - 1":
+		case "Win10 Chrome Latest":
 			device = false;
 			fast = true;
 			capabilities.setCapability("platformName", "Windows");
@@ -94,63 +83,84 @@ public class TestHomeDeliverySignup {
 			capabilities.setCapability("browserVersion", "80");
 			capabilities.setCapability("resolution", "1280x1024");
 			capabilities.setCapability("location", "US East");
-			break;	
-		
-		case "Chrome Latest - 2":
+			break;
+
+		case "Win10 Chrome Latest-1":
 			device = false;
 			fast = true;
 			capabilities.setCapability("platformName", "Windows");
 			capabilities.setCapability("platformVersion", "10");
 			capabilities.setCapability("browserName", "Chrome");
-			capabilities.setCapability("browserVersion", "79");
-			capabilities.setCapability("resolution", "1280x1024");
-			capabilities.setCapability("location", "US East");
-			break;	
-
-		case "Firefox Latest":
-			device = false;
-			fast = true;
-			capabilities.setCapability("platformName", "Windows");
-			capabilities.setCapability("platformVersion", "10");
-			capabilities.setCapability("browserName", "Firefox");
-			capabilities.setCapability("browserVersion", "75");
-			capabilities.setCapability("resolution", "1280x1024");
-			capabilities.setCapability("location", "US East");
-			break;
-
-		case "Firefox Latest - 1":
-			device = false;
-			fast = true;
-			capabilities.setCapability("platformName", "Windows");
-			capabilities.setCapability("platformVersion", "10");
-			capabilities.setCapability("browserName", "Firefox");
-			capabilities.setCapability("browserVersion", "74");
-			capabilities.setCapability("resolution", "1280x1024");
-			capabilities.setCapability("location", "US East");
-			break;
-
-		case "Edge Latest":
-			device = false;
-			fast = true;
-			capabilities.setCapability("platformName", "Windows");
-			capabilities.setCapability("platformVersion", "10");
-			capabilities.setCapability("browserName", "Edge");
-			capabilities.setCapability("browserVersion", "80");
+			capabilities.setCapability("browserVersion", "latest-1");
 			capabilities.setCapability("resolution", "1280x1024");
 			capabilities.setCapability("location", "US East");
 			break;
 			
-		case "Edge Latest - 1":
+		case "Win10 Chrome Latest-2":
 			device = false;
 			fast = true;
 			capabilities.setCapability("platformName", "Windows");
 			capabilities.setCapability("platformVersion", "10");
-			capabilities.setCapability("browserName", "Edge");
-			capabilities.setCapability("browserVersion", "79");
+			capabilities.setCapability("browserName", "Chrome");
+			capabilities.setCapability("browserVersion", "latest-2");
 			capabilities.setCapability("resolution", "1280x1024");
 			capabilities.setCapability("location", "US East");
 			break;
 			
+		case "Win10 Chrome Latest-3":
+			device = false;
+			fast = true;
+			capabilities.setCapability("platformName", "Windows");
+			capabilities.setCapability("platformVersion", "10");
+			capabilities.setCapability("browserName", "Chrome");
+			capabilities.setCapability("browserVersion", "76");
+			capabilities.setCapability("resolution", "1280x1024");
+			capabilities.setCapability("location", "US East");
+			break;
+			
+		case "Win8.1 Chrome Latest":
+			device = false;
+			fast = true;
+			capabilities.setCapability("platformName", "Windows");
+			capabilities.setCapability("platformVersion", "8.1");
+			capabilities.setCapability("browserName", "Chrome");
+			capabilities.setCapability("browserVersion", "latest");
+			capabilities.setCapability("resolution", "1280x1024");
+			capabilities.setCapability("location", "US East");
+			break;
+
+		case "Win8.1 Chrome Latest-1":
+			device = false;
+			fast = true;
+			capabilities.setCapability("platformName", "Windows");
+			capabilities.setCapability("platformVersion", "8.1");
+			capabilities.setCapability("browserName", "Chrome");
+			capabilities.setCapability("browserVersion", "latest-1");
+			capabilities.setCapability("resolution", "1280x1024");
+			capabilities.setCapability("location", "US East");
+			break;
+			
+		case "Win8.1 Chrome Latest-2":
+			device = false;
+			fast = true;
+			capabilities.setCapability("platformName", "Windows");
+			capabilities.setCapability("platformVersion", "8.1");
+			capabilities.setCapability("browserName", "Chrome");
+			capabilities.setCapability("browserVersion", "latest-2");
+			capabilities.setCapability("resolution", "1280x1024");
+			capabilities.setCapability("location", "US East");
+			break;
+			
+		case "Win8.1 Chrome Latest-3":
+			device = false;
+			fast = true;
+			capabilities.setCapability("platformName", "Windows");
+			capabilities.setCapability("platformVersion", "8.1");
+			capabilities.setCapability("browserName", "Chrome");
+			capabilities.setCapability("browserVersion", "76");
+			capabilities.setCapability("resolution", "1280x1024");
+			capabilities.setCapability("location", "US East");
+			break;
 		}
 
 		// capabilities.setCapability("user", System.getProperty("PerfectoUsername"));
