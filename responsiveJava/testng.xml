@@ -1,58 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="10" name="Java Responsive Web" parallel="tests">
+			
 		<test name="Sign up for home delivery - iPhone11">
 		<parameter name="targetEnvironment" value="iPhone11" />
 		<classes>
 			<class name="test.java.TestHomeDeliverySignup" />
 		</classes>
 		</test>
-		<test name="Sign up for home delivery - Samsung Galaxy S9+">
-		<parameter name="targetEnvironment" value="Smasung Galaxy S9+" />
+		<test name="Sign up for home delivery - Samsung Galaxy Note10">
+		<parameter name="targetEnvironment" value="Smasung Galaxy Note10" />
 		<classes>
 			<class name="test.java.TestHomeDeliverySignup" />
 		</classes>
 		</test>
-		<test name="Sign up for home delivery - Win10 Chrome Lates">
-		<parameter name="targetEnvironment" value="Win10 Chrome Latest" />
-		<classes>
-			<class name="test.java.TestHomeDeliverySignup" />
-		</classes>
-		</test>
-			<test name="Sign up for home delivery - Win10 Chrome Latest-1">
+		<test name="Sign up for home delivery - Win10 Chrome Latest-1">
 		<parameter name="targetEnvironment" value="Win10 Chrome Latest-1" />
 		<classes>
 			<class name="test.java.TestHomeDeliverySignup" />
 		</classes>
 		</test>
-		<test name="Sign up for home delivery - Win10 Chrome Latest-2">
+			<test name="Sign up for home delivery - Win10 Chrome Latest-2">
 		<parameter name="targetEnvironment" value="Win10 Chrome Latest-2" />
 		<classes>
 			<class name="test.java.TestHomeDeliverySignup" />
 		</classes>
 		</test>
-			<test name="Sign up for home delivery - Win10 Firefox Latest">
-		<parameter name="targetEnvironment" value="Win10 Firefox Latest" />
+		<test name="Sign up for home delivery - Win10 Chrome Latest-3">
+		<parameter name="targetEnvironment" value="Win10 Chrome Latest-3" />
 		<classes>
 			<class name="test.java.TestHomeDeliverySignup" />
 		</classes>
 		</test>
-		<test name="Sign up for home delivery - Win10 Firefox Latest-1">
-		<parameter name="targetEnvironment" value="Win10 Firefox Latest-1" />
+			<test name="Sign up for home delivery - Win8.1 Chrome Latest">
+		<parameter name="targetEnvironment" value="Win8.1 Chrome Latest" />
 		<classes>
 			<class name="test.java.TestHomeDeliverySignup" />
 		</classes>
 		</test>
-			<test name="Sign up for home delivery - Win10 Edge Latest">
-		<parameter name="targetEnvironment" value="Win10 Edge Latest" />
+		<test name="Sign up for home delivery - Win8.1 Chrome Latest-1">
+		<parameter name="targetEnvironment" value="Win8.1 Chrome Latest-1" />
 		<classes>
 			<class name="test.java.TestHomeDeliverySignup" />
 		</classes>
 		</test>
-		<test name="Sign up for home delivery - Win10 Edge Latest-1">
-		<parameter name="targetEnvironment" value="Win10 Edge Latest-1" />
+			<test name="Sign up for home delivery - Win8.1 Chrome Latest-2">
+		<parameter name="targetEnvironment" value="Win8.1 Chrome Latest-2" />
+		<classes>
+			<class name="test.java.TestHomeDeliverySignup" />
+		</classes>
+		</test>
+		<test name="Sign up for home delivery - Win8.1 Chrome Latest-3">
+		<parameter name="targetEnvironment" value="Win8.1 Chrome Latest-3" />
 		<classes>
 			<class name="test.java.TestHomeDeliverySignup" />
 		</classes>
 		</test>
 </suite>	
+
