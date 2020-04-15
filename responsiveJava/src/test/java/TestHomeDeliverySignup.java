@@ -54,27 +54,25 @@ public class TestHomeDeliverySignup {
 		//capabilities.setCapability("openDeviceTimeout", 5);
 
 		switch (targetEnvironment) {
-		case "Galaxy-S6":
-			device = true;
-			capabilities.setCapability("platformName", "Android");
-			capabilities.setCapability("platformVersion", "6.0.1");
-			capabilities.setCapability("manufacturer", "Samsung");
-			capabilities.setCapability("model", "Galaxy S6");
-			capabilities.setCapability("location", "NA-US-BOS");
-			capabilities.setCapability("resolution", "1440x2660");
-			capabilities.setCapability("deviceId", "0815F88C2CA51F05");
-			break;
-
-		case "iPhone8":
-			device = true;
+		case "iPhone11":
 			capabilities.setCapability("platformName", "iOS");
-			capabilities.setCapability("platformVersion", "12.1");
-			capabilities.setCapability("manufacturer", "Apple");
-			capabilities.setCapability("model", "iPhone-8");
+			capabilities.setCapability("platformVersion", "13.0");
 			capabilities.setCapability("location", "NA-US-BOS");
-			capabilities.setCapability("resolution", "750x1334");
-			capabilities.setCapability("deviceId", "311C990DA91C9CB4A36D2D6A5F296D5019D28678");
-			break;
+			capabilities.setCapability("resolution", "828x1792");
+			capabilities.setCapability("manufacturer", "Apple");
+			capabilities.setCapability("model", "iPhone-11");
+			capabilities.setCapability("deviceId", "00008030-001258DE2E10802E");
+		break;
+				
+			case "Smasung Galaxy S9+":
+			capabilities.setCapability("platformName", "Android");
+			capabilities.setCapability("platformVersion", "9");
+			capabilities.setCapability("location", "NA-US-BOS");
+			capabilities.setCapability("resolution", "1440x2960");
+			capabilities.setCapability("manufacturer", "Samsung");
+			capabilities.setCapability("model", "Galaxy Note 9");
+			capabilities.setCapability("deviceId", "272911852E217ECE");
+		break;
 		
 		case "Chrome Latest":
 			device = false;
@@ -82,7 +80,7 @@ public class TestHomeDeliverySignup {
 			capabilities.setCapability("platformName", "Windows");
 			capabilities.setCapability("platformVersion", "10");
 			capabilities.setCapability("browserName", "Chrome");
-			capabilities.setCapability("browserVersion", "latest");
+			capabilities.setCapability("browserVersion", "81");
 			capabilities.setCapability("resolution", "1280x1024");
 			capabilities.setCapability("location", "US East");
 			break;
@@ -93,7 +91,7 @@ public class TestHomeDeliverySignup {
 			capabilities.setCapability("platformName", "Windows");
 			capabilities.setCapability("platformVersion", "10");
 			capabilities.setCapability("browserName", "Chrome");
-			capabilities.setCapability("browserVersion", "latest-1");
+			capabilities.setCapability("browserVersion", "80");
 			capabilities.setCapability("resolution", "1280x1024");
 			capabilities.setCapability("location", "US East");
 			break;	
@@ -104,29 +102,19 @@ public class TestHomeDeliverySignup {
 			capabilities.setCapability("platformName", "Windows");
 			capabilities.setCapability("platformVersion", "10");
 			capabilities.setCapability("browserName", "Chrome");
-			capabilities.setCapability("browserVersion", "latest-2");
+			capabilities.setCapability("browserVersion", "79");
 			capabilities.setCapability("resolution", "1280x1024");
 			capabilities.setCapability("location", "US East");
 			break;	
-		case "Internet Explorer 11":
-			device = false;
-			fast = true;
-			capabilities.setCapability("platformName", "Windows");
-			capabilities.setCapability("platformVersion", "8.1");
-			capabilities.setCapability("browserName", "Internet Explorer");
-			capabilities.setCapability("browserVersion", "11");
-			capabilities.setCapability("resolution", "1366x768");
-			capabilities.setCapability("location", "US East");
-			break;
 
 		case "Firefox Latest":
 			device = false;
 			fast = true;
 			capabilities.setCapability("platformName", "Windows");
-			capabilities.setCapability("platformVersion", "8.1");
+			capabilities.setCapability("platformVersion", "10");
 			capabilities.setCapability("browserName", "Firefox");
-			capabilities.setCapability("browserVersion", "latest");
-			capabilities.setCapability("resolution", "1366x768");
+			capabilities.setCapability("browserVersion", "75");
+			capabilities.setCapability("resolution", "1280x1024");
 			capabilities.setCapability("location", "US East");
 			break;
 
@@ -134,87 +122,21 @@ public class TestHomeDeliverySignup {
 			device = false;
 			fast = true;
 			capabilities.setCapability("platformName", "Windows");
-			capabilities.setCapability("platformVersion", "7");
+			capabilities.setCapability("platformVersion", "10");
 			capabilities.setCapability("browserName", "Firefox");
-			capabilities.setCapability("browserVersion", "latest-1");
+			capabilities.setCapability("browserVersion", "74");
 			capabilities.setCapability("resolution", "1280x1024");
 			capabilities.setCapability("location", "US East");
 			break;
 
-		
-		
-		case "Chrome Beta":
-			device = false;
-			fast = true;
-			capabilities.setCapability("platformName", "Windows");
-			capabilities.setCapability("platformVersion", "7");
-			capabilities.setCapability("browserName", "Chrome");
-			capabilities.setCapability("browserVersion", "beta");
-			capabilities.setCapability("resolution", "1280x1024");
-			capabilities.setCapability("location", "US East");
-			break;
-		case "Safari 10 Sierra":
-			device = false;
-			fast = false;
-			capabilities.setCapability("platformName", "Mac");
-			capabilities.setCapability("platformVersion", "macOS Sierra");
-			capabilities.setCapability("browserName", "Safari");
-			capabilities.setCapability("browserVersion", "10");
-			capabilities.setCapability("resolution", "1440x900");
-			capabilities.setCapability("location", "NA-US-BOS");
-			break;	
-			
-		case "Safari 9 Yosemite":
-			device = false;
-			fast = false;
-			capabilities.setCapability("platformName", "Mac");
-			capabilities.setCapability("platformVersion", "OS X Yosemite");
-			capabilities.setCapability("browserName", "Safari");
-			capabilities.setCapability("browserVersion", "9");
-			capabilities.setCapability("resolution", "1440x900");
-			capabilities.setCapability("location", "NA-US-BOS");
-			break;
-		
-		case "Safari 8 Yosemite":
-			device = false;
-			fast = false;
-			capabilities.setCapability("platformName", "Mac");
-			capabilities.setCapability("platformVersion", "OS X Yosemite");
-			capabilities.setCapability("browserName", "Safari");
-			capabilities.setCapability("browserVersion", "8");
-			capabilities.setCapability("resolution", "1440x900");
-			capabilities.setCapability("location", "NA-US-BOS");
-			break;
-		
-		case "Safari 9 Capitan":
-			device = false;
-			fast = false;
-			capabilities.setCapability("platformName", "Mac");
-			capabilities.setCapability("platformVersion", "OS X El Capitan");
-			capabilities.setCapability("browserName", "Safari");
-			capabilities.setCapability("browserVersion", "9");
-			capabilities.setCapability("resolution", "1440x900");
-			capabilities.setCapability("location", "NA-US-BOS");
-			break;
-		
-		case "Firefox Beta":
-			device = false;
-			fast = true;
-			capabilities.setCapability("platformName", "Windows");
-			capabilities.setCapability("platformVersion", "10");
-			capabilities.setCapability("browserName", "Firefox");
-			capabilities.setCapability("browserVersion", "beta");
-			capabilities.setCapability("resolution", "1280x1024");
-			capabilities.setCapability("location", "US East");
-			break;
 		case "Edge Latest":
 			device = false;
 			fast = true;
 			capabilities.setCapability("platformName", "Windows");
 			capabilities.setCapability("platformVersion", "10");
 			capabilities.setCapability("browserName", "Edge");
-			capabilities.setCapability("browserVersion", "latest");
-			capabilities.setCapability("resolution", "1600x1200");
+			capabilities.setCapability("browserVersion", "80");
+			capabilities.setCapability("resolution", "1280x1024");
 			capabilities.setCapability("location", "US East");
 			break;
 			
@@ -224,8 +146,8 @@ public class TestHomeDeliverySignup {
 			capabilities.setCapability("platformName", "Windows");
 			capabilities.setCapability("platformVersion", "10");
 			capabilities.setCapability("browserName", "Edge");
-			capabilities.setCapability("browserVersion", "latest-1");
-			capabilities.setCapability("resolution", "1600x1200");
+			capabilities.setCapability("browserVersion", "79");
+			capabilities.setCapability("resolution", "1280x1024");
 			capabilities.setCapability("location", "US East");
 			break;
 			
